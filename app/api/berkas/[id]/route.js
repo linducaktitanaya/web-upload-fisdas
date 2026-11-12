@@ -48,5 +48,5 @@ export async function GET(request, { params }) {
   const panjang = hulu.headers.get('content-length');
   if (panjang) header.set('Content-Length', panjang);
 
-  return new Response(hulu.body, { status: 200, headers });
+  return new Response(hulu.body, { status: 200, headers: header });
 }
